@@ -1,0 +1,20 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WORN OUT TAPES | Jens Einhorn</title><link rel="stylesheet" href="/styles.css"></head><body>
+  <aside class="sidebar">
+    <a class="brand" href="/">Jens Einhorn</a>
+    <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="/">REISE OHNE ENDE</a>
+      <a href="/strasse-der-jugend">WORN OUT TAPES</a>
+      <a href="/porzellan-und-vulkan">PORCELAIN &amp; VOLCANO</a>
+      <a href="/raw-vision">FOR THE BIRDS</a>
+      <a href="/we-are-all-we-have">WE ARE ALL WE HAVE</a>
+      <a href="/about">ABOUT</a>
+      <a href="/contact">CONTACT</a>
+    </nav>
+    <a class="edit-link" href="/admin/">Website bearbeiten</a>
+  </aside><main class="content text-page"><section class="essay"><h1>WORN OUT TAPES</h1><p class="lead">Selected works from the Worn Out Tapes series.</p><p class="muted">The visual structure is already prepared for the original works and captions. The image files from the former Wix page will be moved here next so the site remains independent of Wix.</p></section></main><script>
+const t=document.querySelector('.menu-toggle'),n=document.querySelector('.site-nav');
+if(t&&n)t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',String(o));});
+document.querySelectorAll('.zoomable').forEach(img=>img.addEventListener('click',()=>{const l=document.querySelector('.lightbox');l.querySelector('img').src=img.src;l.querySelector('img').alt=img.alt;l.classList.add('open');document.body.classList.add('no-scroll');}));
+const lb=document.querySelector('.lightbox');if(lb)lb.addEventListener('click',()=>{lb.classList.remove('open');document.body.classList.remove('no-scroll');});
+</script></body></html>
