@@ -7,6 +7,82 @@
   <title>Website bearbeiten | Jens Einhorn</title>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.17.0-beta.0/dist/decap-cms.js"></script>
+<script>
+  window.CMS_MANUAL_INIT = true;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/decap-cms@3.17.0-beta.0/dist/decap-cms.js"></script>
+<script>
+const projectFields = [
+  { label: "Menütitel", name: "menu_title", widget: "string" },
+  { label: "Seitentitel", name: "title", widget: "string" },
+  {
+    label: "Arbeiten", name: "works", widget: "list", summary: "{{fields.title}}",
+    fields: [
+      { label: "Bild", name: "image", widget: "image", choose_url: true },
+      { label: "Titel", name: "title", widget: "string" },
+      { label: "Jahr", name: "year", widget: "string", required: false },
+      { label: "Material", name: "material", widget: "text", required: false },
+      { label: "Maße", name: "size", widget: "string", required: false }
+    ]
+  },
+  { label: "Text", name: "text", widget: "text", required: false },
+  { label: "Hinweis / Übersetzung", name: "note", widget: "text", required: false },
+  {
+    label: "Ausstellungsansichten", name: "installation_views", widget: "list", required: false,
+    summary: "{{fields.caption}}",
+    fields: [
+      { label: "Bild", name: "image", widget: "image", choose_url: true },
+      { label: "Bildunterschrift", name: "caption", widget: "string", required: false }
+    ]
+  }
+];
+
+CMS.init({
+  config: {
+    backend: {
+      name: "turbo-github",
+      turbo_site_id: "e71ee10b-6103-4cc6-b96c-64192c4501d2",
+      branch: "main"
+    },
+    media_folder: "assets/uploads",
+    public_folder: "/assets/uploads",
+    publish_mode: "simple",
+    collections: [
+      {
+        label: "Projekte",
+        name: "projects",
+        files: [
+          { label: "REISE OHNE ENDE", name: "reise_ohne_ende", file: "content/projects/reise-ohne-ende.json", format: "json", fields: projectFields },
+          { label: "WORN OUT TAPES", name: "worn_out_tapes", file: "content/projects/worn-out-tapes.json", format: "json", fields: projectFields },
+          { label: "PORCELAIN & VOLCANO", name: "porcelain_volcano", file: "content/projects/porcelain-volcano.json", format: "json", fields: projectFields },
+          { label: "FOR THE BIRDS", name: "for_the_birds", file: "content/projects/for-the-birds.json", format: "json", fields: projectFields },
+          { label: "WE ARE ALL WE HAVE", name: "we_are_all_we_have", file: "content/projects/we-are-all-we-have.json", format: "json", fields: projectFields }
+        ]
+      },
+      {
+        label: "Seiten",
+        name: "pages",
+        files: [
+          {
+            label: "ABOUT", name: "about", file: "content/pages/about.json", format: "json",
+            fields: [
+              { label: "Titel", name: "title", widget: "string" },
+              { label: "Text", name: "body", widget: "text" }
+            ]
+          },
+          {
+            label: "CONTACT", name: "contact", file: "content/pages/contact.json", format: "json",
+            fields: [
+              { label: "Titel", name: "title", widget: "string" },
+              { label: "E-Mail", name: "email", widget: "string" },
+              { label: "Zusätzlicher Text", name: "body", widget: "text", required: false }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+});
+</script>
 </body>
 </html>
