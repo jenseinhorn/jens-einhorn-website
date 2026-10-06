@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jens Einhorn</title>
+  <meta name="description" content="Portfolio von Jens Einhorn">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">Jens Einhorn</a>
+    <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="#reise-ohne-ende">Reise ohne Ende</a>
+      <a href="#worn-out-tapes">Worn Out Tapes</a>
+      <a href="#porcelain-volcano">Porcelain &amp; Volcano</a>
+      <a href="#for-the-birds">For the Birds</a>
+      <a href="#we-are-all-we-have">We Are All We Have</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-placeholder">JENS EINHORN</div>
+    </section>
+
+    <section id="reise-ohne-ende" class="project">
+      <h2>REISE OHNE ENDE</h2>
+      <div class="art-grid">
+        <div class="art-placeholder">Bild 1</div>
+        <div class="art-placeholder">Bild 2</div>
+        <div class="art-placeholder">Bild 3</div>
+      </div>
+    </section>
+
+    <section id="worn-out-tapes" class="project">
+      <h2>WORN OUT TAPES</h2>
+      <div class="art-grid">
+        <div class="art-placeholder">Bild 1</div>
+        <div class="art-placeholder">Bild 2</div>
+      </div>
+    </section>
+
+    <section id="porcelain-volcano" class="project">
+      <h2>PORCELAIN &amp; VOLCANO</h2>
+      <div class="art-grid">
+        <div class="art-placeholder">Bild 1</div>
+        <div class="art-placeholder">Bild 2</div>
+      </div>
+    </section>
+
+    <section id="for-the-birds" class="project">
+      <h2>FOR THE BIRDS</h2>
+      <div class="art-grid">
+        <div class="art-placeholder">Bild 1</div>
+        <div class="art-placeholder">Bild 2</div>
+      </div>
+    </section>
+
+    <section id="we-are-all-we-have" class="project">
+      <h2>WE ARE ALL WE HAVE</h2>
+      <div class="art-grid">
+        <div class="art-placeholder">Bild 1</div>
+        <div class="art-placeholder">Bild 2</div>
+      </div>
+    </section>
+
+    <section id="about" class="text-section">
+      <h2>ABOUT</h2>
+      <p>Biografie und Ausstellungstext folgen.</p>
+    </section>
+
+    <section id="contact" class="text-section">
+      <h2>CONTACT</h2>
+      <p>Kontaktinformationen folgen.</p>
+    </section>
+  </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.site-nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
