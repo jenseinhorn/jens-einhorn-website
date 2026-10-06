@@ -7,29 +7,43 @@
   <title>Website bearbeiten | Jens Einhorn</title>
 </head>
 <body>
-<script>
-  window.CMS_MANUAL_INIT = true;
-</script>
+<script>window.CMS_MANUAL_INIT = true;</script>
 <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.17.0-beta.0/dist/decap-cms.js"></script>
 <script>
+const workFields = [
+  { label: "Bild", name: "image", widget: "image", choose_url: true, hint: "Bild hochladen oder vorhandenes Bild auswählen." },
+  { label: "Titel", name: "title", widget: "string", hint: "Nur der Werktitel, ohne Jahr." },
+  { label: "Jahr", name: "year", widget: "string", required: false },
+  { label: "Material / Technik", name: "material", widget: "text", required: false },
+  { label: "Maße", name: "size", widget: "string", required: false, hint: "Zum Beispiel: 50 × 60 cm" }
+];
+
 const projectFields = [
-  { label: "Menütitel", name: "menu_title", widget: "string" },
+  { label: "Menütitel", name: "menu_title", widget: "string", hint: "So erscheint das Projekt links im Menü." },
   { label: "Seitentitel", name: "title", widget: "string" },
   {
-    label: "Arbeiten", name: "works", widget: "list", summary: "{{fields.title}}",
-    fields: [
-      { label: "Bild", name: "image", widget: "image", choose_url: true },
-      { label: "Titel", name: "title", widget: "string" },
-      { label: "Jahr", name: "year", widget: "string", required: false },
-      { label: "Material", name: "material", widget: "text", required: false },
-      { label: "Maße", name: "size", widget: "string", required: false }
-    ]
+    label: "Arbeiten",
+    label_singular: "Arbeit",
+    name: "works",
+    widget: "list",
+    summary: "{{fields.title}} — {{fields.year}}",
+    add_to_top: true,
+    collapsed: true,
+    hint: "Neue Arbeit hinzufügen. Die Reihenfolge der Arbeiten kann per Ziehen verändert werden.",
+    fields: workFields
   },
-  { label: "Text", name: "text", widget: "text", required: false },
-  { label: "Hinweis / Übersetzung", name: "note", widget: "text", required: false },
+  { label: "Projekttext", name: "text", widget: "text", required: false, hint: "Absätze durch eine Leerzeile trennen." },
+  { label: "Hinweis / Ausstellung / Übersetzung", name: "note", widget: "text", required: false },
   {
-    label: "Ausstellungsansichten", name: "installation_views", widget: "list", required: false,
+    label: "Ausstellungsansichten",
+    label_singular: "Ausstellungsansicht",
+    name: "installation_views",
+    widget: "list",
+    required: false,
     summary: "{{fields.caption}}",
+    add_to_top: false,
+    collapsed: true,
+    hint: "Zusätzliche Installations- oder Ausstellungsfotos am Ende der Projektseite.",
     fields: [
       { label: "Bild", name: "image", widget: "image", choose_url: true },
       { label: "Bildunterschrift", name: "caption", widget: "string", required: false }
@@ -65,14 +79,20 @@ CMS.init({
         name: "pages",
         files: [
           {
-            label: "ABOUT", name: "about", file: "content/pages/about.json", format: "json",
+            label: "ABOUT",
+            name: "about",
+            file: "content/pages/about.json",
+            format: "json",
             fields: [
               { label: "Titel", name: "title", widget: "string" },
-              { label: "Text", name: "body", widget: "text" }
+              { label: "Text", name: "body", widget: "text", hint: "Absätze durch eine Leerzeile trennen." }
             ]
           },
           {
-            label: "CONTACT", name: "contact", file: "content/pages/contact.json", format: "json",
+            label: "CONTACT",
+            name: "contact",
+            file: "content/pages/contact.json",
+            format: "json",
             fields: [
               { label: "Titel", name: "title", widget: "string" },
               { label: "E-Mail", name: "email", widget: "string" },
