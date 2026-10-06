@@ -6,7 +6,6 @@ backend:
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
-
 publish_mode: simple
 
 collections:
@@ -18,25 +17,31 @@ collections:
         file: "content/projects/reise-ohne-ende.json"
         format: "json"
         fields: &project_fields
-          - { label: "Menütitel", name: "menu_title", widget: "string" }
+          - { label: "Menütitel", name: "menu_title", widget: "string", hint: "So erscheint das Projekt links im Menü." }
           - { label: "Seitentitel", name: "title", widget: "string" }
           - label: "Arbeiten"
+            label_singular: "Arbeit"
             name: "works"
             widget: "list"
-            summary: "{{fields.title}}"
+            summary: "{{fields.title}} — {{fields.year}}"
+            add_to_top: true
+            collapsed: true
+            hint: "Neue Arbeit hinzufügen. Die Reihenfolge kann per Ziehen verändert werden."
             fields:
               - { label: "Bild", name: "image", widget: "image", choose_url: true }
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Jahr", name: "year", widget: "string", required: false }
-              - { label: "Material", name: "material", widget: "text", required: false }
-              - { label: "Maße", name: "size", widget: "string", required: false }
-          - { label: "Text", name: "text", widget: "text", required: false }
-          - { label: "Hinweis / Übersetzung", name: "note", widget: "text", required: false }
+              - { label: "Material / Technik", name: "material", widget: "text", required: false }
+              - { label: "Maße", name: "size", widget: "string", required: false, hint: "Zum Beispiel: 50 × 60 cm" }
+          - { label: "Projekttext", name: "text", widget: "text", required: false, hint: "Absätze durch eine Leerzeile trennen." }
+          - { label: "Hinweis / Ausstellung / Übersetzung", name: "note", widget: "text", required: false }
           - label: "Ausstellungsansichten"
+            label_singular: "Ausstellungsansicht"
             name: "installation_views"
             widget: "list"
             required: false
             summary: "{{fields.caption}}"
+            collapsed: true
             fields:
               - { label: "Bild", name: "image", widget: "image", choose_url: true }
               - { label: "Bildunterschrift", name: "caption", widget: "string", required: false }
@@ -74,7 +79,8 @@ collections:
         format: "json"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Text", name: "body", widget: "text" }
+          - { label: "Text", name: "body", widget: "text", hint: "Absätze durch eine Leerzeile trennen." }
+
       - label: "CONTACT"
         name: "contact"
         file: "content/pages/contact.json"
