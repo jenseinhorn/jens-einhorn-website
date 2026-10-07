@@ -23,7 +23,22 @@ function shell(){
   const t=document.querySelector(".menu-toggle"),n=document.querySelector(".site-nav");t.addEventListener("click",()=>{const o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o))});
 }
 function bindZoom(){document.querySelectorAll(".zoomable").forEach(img=>img.addEventListener("click",()=>{const l=document.querySelector(".lightbox");l.querySelector("img").src=img.src;l.querySelector("img").alt=img.alt;l.classList.add("open");document.body.classList.add("no-scroll")}));const lb=document.querySelector(".lightbox");lb.addEventListener("click",()=>{lb.classList.remove("open");document.body.classList.remove("no-scroll")})}
+async function applyDesign(){
+  try{
+    const d=await fetch("/content/settings/design.json",{cache:"no-store"}).then(r=>r.json());
+    const root=document.documentElement;
+    if(d.heading_font) root.style.setProperty("--heading-font",d.heading_font);
+    if(d.heading_size) root.style.setProperty("--heading-size",d.heading_size+"px");
+    if(d.menu_font) root.style.setProperty("--menu-font",d.menu_font);
+    if(d.menu_size) root.style.setProperty("--menu-size",d.menu_size+"px");
+    if(d.heading_menu_gap!==undefined) root.style.setProperty("--heading-menu-gap",d.heading_menu_gap+"px");
+    if(d.image_width) root.style.setProperty("--image-width",d.image_width+"px");
+    if(d.caption_font) root.style.setProperty("--caption-font",d.caption_font);
+    if(d.caption_size) root.style.setProperty("--caption-size",d.caption_size+"px");
+  }catch(e){}
+}
 async function main(){
+ await applyDesign();
  shell();
  let path=location.pathname.replace(/\/$/,"")||"/";
  let file=routes[path]||routes["/"];
