@@ -9,5 +9,7 @@
   "caption_size": 10,
   "heading_top_offset": 26,
   "first_image_top_offset": 26,
-  "body_font": "\"Roboto\", Arial, Helvetica, sans-serif"
+  "body_font": "\"Roboto\", Arial, Helvetica, sans-serif",
+  "body_size": 12,
+  "caption_title_size": 11
 }
