@@ -34,6 +34,7 @@ async function applyDesign(){
     if(d.heading_menu_gap!==undefined) root.style.setProperty("--heading-menu-gap",d.heading_menu_gap+"px");
     if(d.image_width) root.style.setProperty("--image-width",d.image_width+"px");
     if(d.caption_font) root.style.setProperty("--caption-font",d.caption_font);
+    if(d.body_font) root.style.setProperty("--body-font",d.body_font);
     if(d.caption_size) root.style.setProperty("--caption-size",d.caption_size+"px");
   }catch(e){}
 }
