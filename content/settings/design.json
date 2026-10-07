@@ -1,15 +1,15 @@
 {
-  "heading_font": "\"Roboto\", Arial, Helvetica, sans-serif",
-  "heading_size": 29,
-  "menu_font": "\"Roboto Condensed\", \"Arial Narrow\", Arial, sans-serif",
+  "caption_title_size": 13,
   "menu_size": 16,
-  "heading_menu_gap": 70,
   "image_width": 850,
   "caption_font": "\"Roboto\", Arial, Helvetica, sans-serif",
-  "caption_size": 10,
-  "heading_top_offset": 26,
-  "first_image_top_offset": 26,
+  "heading_font": "\"Roboto\", Arial, Helvetica, sans-serif",
   "body_font": "\"Roboto\", Arial, Helvetica, sans-serif",
-  "body_size": 12,
-  "caption_title_size": 11
+  "menu_font": "\"Roboto Condensed\", \"Arial Narrow\", Arial, sans-serif",
+  "first_image_top_offset": 26,
+  "heading_menu_gap": 70,
+  "heading_top_offset": 26,
+  "caption_size": 13,
+  "heading_size": 29,
+  "body_size": 18
 }
