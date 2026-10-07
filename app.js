@@ -35,7 +35,9 @@ async function applyDesign(){
     if(d.image_width) root.style.setProperty("--image-width",d.image_width+"px");
     if(d.caption_font) root.style.setProperty("--caption-font",d.caption_font);
     if(d.body_font) root.style.setProperty("--body-font",d.body_font);
+    if(d.body_size) root.style.setProperty("--body-size",d.body_size+"px");
     if(d.caption_size) root.style.setProperty("--caption-size",d.caption_size+"px");
+    if(d.caption_title_size) root.style.setProperty("--caption-title-size",d.caption_title_size+"px");
   }catch(e){}
 }
 async function main(){
@@ -47,7 +49,7 @@ async function main(){
  const a=document.getElementById("app");
  if(path==="/about"){a.className="content text-page";a.innerHTML=`<section class="essay"><h1>${esc(d.title)}</h1>${paras(d.body)}</section>`;return}
  if(path==="/contact"){a.className="content text-page";a.innerHTML=`<section class="essay"><h1>${esc(d.title)}</h1><p><a href="mailto:${esc(d.email)}">${esc(d.email)}</a></p>${paras(d.body||"")}</section>`;return}
- const works=(d.works||[]).map(w=>`<figure><img class="zoomable" src="${esc(w.image)}" alt="${esc((w.title||"")+" "+(w.year||""))}" loading="lazy"><figcaption>${esc(w.title||"")}${w.year?", "+esc(w.year):""}${w.material?"<br>"+esc(w.material):""}${w.size?"<br>"+esc(w.size):""}</figcaption></figure>`).join("");
+ const works=(d.works||[]).map(w=>`<figure><img class="zoomable" src="${esc(w.image)}" alt="${esc((w.title||"")+" "+(w.year||""))}" loading="lazy"><figcaption>${w.title?`<span class="work-title">${esc(w.title)}</span>`:""}${w.year?(w.title?", ":"")+esc(w.year):""}${w.material?"<br>"+esc(w.material):""}${w.size?"<br>"+esc(w.size):""}</figcaption></figure>`).join("");
  const inst=(d.installation_views||[]).map(v=>`<figure class="installation"><img class="zoomable" src="${esc(v.image)}" alt="${esc(v.caption||d.title)}" loading="lazy"><figcaption>${esc(v.caption||d.title)}</figcaption></figure>`).join("");
  a.innerHTML=`<section class="gallery">${works}</section><section class="essay"><h1>${esc(d.title)}</h1>${paras(d.text||"")}${d.note?`<div class="note">${paras(d.note)}</div>`:""}</section>${inst?`<section class="gallery installation-gallery">${inst}</section>`:""}`;
  bindZoom();
