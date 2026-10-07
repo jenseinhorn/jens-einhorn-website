@@ -21,6 +21,7 @@ collections:
             name: "heading_font"
             widget: "select"
             options:
+              - { label: "Roboto Bold", value: "\"Roboto\", Arial, Helvetica, sans-serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
               - { label: "Helvetica", value: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }
               - { label: "Arial Narrow", value: "\"Arial Narrow\", Arial, sans-serif" }
