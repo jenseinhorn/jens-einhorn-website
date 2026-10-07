@@ -5,8 +5,9 @@
   "menu_size": 16,
   "heading_menu_gap": 70,
   "image_width": 850,
-  "caption_font": "Arial, Helvetica, sans-serif",
+  "caption_font": "\"Roboto\", Arial, Helvetica, sans-serif",
   "caption_size": 10,
   "heading_top_offset": 26,
-  "first_image_top_offset": 26
+  "first_image_top_offset": 26,
+  "body_font": "\"Roboto\", Arial, Helvetica, sans-serif"
 }
