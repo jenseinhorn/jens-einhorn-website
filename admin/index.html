@@ -103,13 +103,15 @@ CMS.init({
                 { label: "Times", value: "\"Times New Roman\", Times, serif" }
               ]},
               { label: "Bildunterschrift – Schriftgröße (px)", name: "caption_size", widget: "number", min: 8, max: 24, step: 1, value_type: "int" },
+              { label: "Bildtitel – Schriftgröße (px)", name: "caption_title_size", widget: "number", min: 8, max: 30, step: 1, value_type: "int", hint: "Der Werktitel erscheint etwas größer und kursiv." },
               { label: "Fließtext – Schriftart", name: "body_font", widget: "select", options: [
                 { label: "Roboto Bold", value: "\"Roboto\", Arial, Helvetica, sans-serif" },
                 { label: "Arial", value: "Arial, Helvetica, sans-serif" },
                 { label: "Helvetica", value: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" },
                 { label: "Georgia", value: "Georgia, serif" },
                 { label: "Times", value: "\"Times New Roman\", Times, serif" }
-              ]}
+              ]},
+              { label: "Fließtext – Schriftgröße (px)", name: "body_size", widget: "number", min: 8, max: 30, step: 1, value_type: "int" }
             ]
           }
         ]
