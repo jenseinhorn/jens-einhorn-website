@@ -1,7 +1,50 @@
 {
   "menu_title": "WORN OUT TAPES",
   "title": "WORN OUT TAPES",
-  "works": [],
+  "works": [
+    {
+      "image": "https://static.wixstatic.com/media/3f9549_83200e0d738a4f9baae2b498e775f560~mv2.jpg",
+      "title": "",
+      "year": "",
+      "material": "",
+      "size": ""
+    },
+    {
+      "image": "https://static.wixstatic.com/media/3f9549_138025e85a954752926c185b23d276a7~mv2.jpg",
+      "title": "",
+      "year": "",
+      "material": "",
+      "size": ""
+    },
+    {
+      "image": "https://static.wixstatic.com/media/3f9549_56111f1568564a9487e5737d6dfbd5eb~mv2.jpg",
+      "title": "",
+      "year": "",
+      "material": "",
+      "size": ""
+    },
+    {
+      "image": "https://static.wixstatic.com/media/3f9549_f702c4a3cd1748dcad40d863ee777f1b~mv2.jpg",
+      "title": "",
+      "year": "",
+      "material": "",
+      "size": ""
+    },
+    {
+      "image": "https://static.wixstatic.com/media/3f9549_97740bd69fb246048afcd0e2c54a6f24~mv2.jpg",
+      "title": "",
+      "year": "",
+      "material": "",
+      "size": ""
+    },
+    {
+      "image": "https://static.wixstatic.com/media/3f9549_d8cd47d3aeab457b8250a7d59cc11723~mv2.jpg",
+      "title": "",
+      "year": "",
+      "material": "",
+      "size": ""
+    }
+  ],
   "text": "",
   "note": "",
   "installation_views": []
