@@ -6,5 +6,7 @@
   "heading_menu_gap": 70,
   "image_width": 850,
   "caption_font": "Arial, Helvetica, sans-serif",
-  "caption_size": 10
+  "caption_size": 10,
+  "heading_top_offset": 26,
+  "first_image_top_offset": 26
 }
