@@ -11,5 +11,9 @@
   "heading_top_offset": 26,
   "caption_size": 13,
   "heading_size": 29,
-  "body_size": 18
+  "body_size": 18,
+  "body_weight": 400,
+  "text_heading_font": "\"Roboto\", Arial, Helvetica, sans-serif",
+  "text_heading_weight": 400,
+  "text_heading_size": 13
 }
