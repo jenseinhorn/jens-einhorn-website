@@ -58,12 +58,34 @@ collections:
             name: "body_font"
             widget: "select"
             options:
-              - { label: "Roboto Bold", value: "\"Roboto\", Arial, Helvetica, sans-serif" }
+              - { label: "Roboto", value: "\"Roboto\", Arial, Helvetica, sans-serif" }
               - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
               - { label: "Helvetica", value: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }
               - { label: "Georgia", value: "Georgia, serif" }
               - { label: "Times", value: "\"Times New Roman\", Times, serif" }
+          - label: "Fließtext – Schriftschnitt"
+            name: "body_weight"
+            widget: "select"
+            options:
+              - { label: "Normal", value: 400 }
+              - { label: "Fett", value: 700 }
           - { label: "Fließtext – Schriftgröße (px)", name: "body_size", widget: "number", min: 8, max: 30, step: 1, value_type: "int" }
+          - label: "Fließtext-Überschrift – Schriftart"
+            name: "text_heading_font"
+            widget: "select"
+            options:
+              - { label: "Roboto", value: "\"Roboto\", Arial, Helvetica, sans-serif" }
+              - { label: "Arial", value: "Arial, Helvetica, sans-serif" }
+              - { label: "Helvetica", value: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }
+              - { label: "Georgia", value: "Georgia, serif" }
+              - { label: "Times", value: "\"Times New Roman\", Times, serif" }
+          - label: "Fließtext-Überschrift – Schriftschnitt"
+            name: "text_heading_weight"
+            widget: "select"
+            options:
+              - { label: "Normal", value: 400 }
+              - { label: "Fett", value: 700 }
+          - { label: "Fließtext-Überschrift – Schriftgröße (px)", name: "text_heading_size", widget: "number", min: 8, max: 40, step: 1, value_type: "int" }
 
   - label: "Projekte"
     name: "projects"
