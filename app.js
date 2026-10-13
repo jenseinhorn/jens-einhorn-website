@@ -36,7 +36,11 @@ async function applyDesign(){
     if(d.image_width) root.style.setProperty("--image-width",d.image_width+"px");
     if(d.caption_font) root.style.setProperty("--caption-font",d.caption_font);
     if(d.body_font) root.style.setProperty("--body-font",d.body_font);
+    if(d.body_weight) root.style.setProperty("--body-weight",d.body_weight);
     if(d.body_size) root.style.setProperty("--body-size",d.body_size+"px");
+    if(d.text_heading_font) root.style.setProperty("--text-heading-font",d.text_heading_font);
+    if(d.text_heading_weight) root.style.setProperty("--text-heading-weight",d.text_heading_weight);
+    if(d.text_heading_size) root.style.setProperty("--text-heading-size",d.text_heading_size+"px");
     if(d.caption_size) root.style.setProperty("--caption-size",d.caption_size+"px");
     if(d.caption_title_size) root.style.setProperty("--caption-title-size",d.caption_title_size+"px");
   }catch(e){}
