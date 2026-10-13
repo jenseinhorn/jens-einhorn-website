@@ -2,18 +2,18 @@
   "caption_title_size": 13,
   "menu_size": 16,
   "image_width": 850,
+  "text_heading_weight": 400,
   "caption_font": "\"Roboto\", Arial, Helvetica, sans-serif",
   "heading_font": "\"Roboto\", Arial, Helvetica, sans-serif",
   "body_font": "\"Roboto\", Arial, Helvetica, sans-serif",
   "menu_font": "\"Roboto Condensed\", \"Arial Narrow\", Arial, sans-serif",
   "first_image_top_offset": 68,
+  "text_heading_size": 18,
   "heading_menu_gap": 70,
+  "body_weight": 400,
   "heading_top_offset": 26,
   "caption_size": 13,
   "heading_size": 29,
   "body_size": 18,
-  "body_weight": 400,
-  "text_heading_font": "\"Roboto\", Arial, Helvetica, sans-serif",
-  "text_heading_weight": 400,
-  "text_heading_size": 13
+  "text_heading_font": "\"Roboto\", Arial, Helvetica, sans-serif"
 }
