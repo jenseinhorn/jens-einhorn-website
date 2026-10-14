@@ -1,7 +1,12 @@
 {
   "menu_title": "FOR THE BIRDS",
   "title": "FOR THE BIRDS",
-  "works": [],
+  "works": [
+    {
+      "title": "SMOKE SIGNAL, 2017",
+      "image": "/assets/uploads/jens_einhorn_37.jpg"
+    }
+  ],
   "text": "",
   "note": "",
   "installation_views": []
