@@ -1,0 +1,30 @@
+name: Migrate Wix images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/migrate_wix_images.py"
+      - ".github/workflows/migrate-wix-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Wix images and rewrite project data
+        run: python3 scripts/migrate_wix_images.py
+      - name: Commit migrated images
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain assets/uploads content/projects)" ]; then
+            echo "Nothing to migrate."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/uploads content/projects
+          git commit -m "Migrate Wix images to local assets"
+          git push
