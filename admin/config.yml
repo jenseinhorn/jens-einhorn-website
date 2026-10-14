@@ -107,7 +107,7 @@ collections:
             collapsed: true
             hint: "Neue Arbeit hinzufügen. Die Reihenfolge kann per Ziehen verändert werden."
             fields:
-              - { label: "Bild", name: "image", widget: "image", choose_url: true }
+              - { label: "Bild vom Computer hochladen", name: "image", widget: "image", choose_url: false, allow_multiple: false, hint: "Auf Bild auswählen klicken und anschließend Upload wählen. Dann kannst du eine Datei direkt vom Computer auswählen." }
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Jahr", name: "year", widget: "string", required: false }
               - { label: "Material / Technik", name: "material", widget: "text", required: false }
