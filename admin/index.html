@@ -11,7 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.17.0-beta.0/dist/decap-cms.js"></script>
 <script>
 const workFields = [
-  { label: "Bild", name: "image", widget: "image", choose_url: true, hint: "Bild hochladen oder vorhandenes Bild auswählen." },
+  { label: "Bild vom Computer hochladen", name: "image", widget: "image", choose_url: false, allow_multiple: false, media_library: { config: { multiple: false } }, hint: "Auf „Bild auswählen“ klicken und anschließend „Upload“ wählen. Dann kannst du eine JPG-, PNG- oder WebP-Datei direkt von deinem Computer auswählen." },
   { label: "Titel", name: "title", widget: "string", hint: "Nur der Werktitel, ohne Jahr." },
   { label: "Jahr", name: "year", widget: "string", required: false },
   { label: "Material / Technik", name: "material", widget: "text", required: false },
@@ -45,7 +45,7 @@ const projectFields = [
     collapsed: true,
     hint: "Zusätzliche Installations- oder Ausstellungsfotos am Ende der Projektseite.",
     fields: [
-      { label: "Bild", name: "image", widget: "image", choose_url: true },
+      { label: "Bild vom Computer hochladen", name: "image", widget: "image", choose_url: false, allow_multiple: false, media_library: { config: { multiple: false } }, hint: "Auf „Bild auswählen“ klicken und anschließend „Upload“ wählen." },
       { label: "Bildunterschrift", name: "caption", widget: "string", required: false }
     ]
   }
