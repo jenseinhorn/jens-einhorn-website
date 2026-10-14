@@ -1,7 +1,57 @@
 {
   "menu_title": "WE ARE ALL WE HAVE",
   "title": "WE ARE ALL WE HAVE",
-  "works": [],
+  "works": [
+    {
+      "image": "/assets/uploads/jens_einhorn_60.jpg",
+      "material": "Mesh, fabric, pvc,  sand, metal,  rust, \nropes, and found objects on canvas\n",
+      "title": "WHERE THE SUN DON'T EVER SHINE",
+      "year": "2016",
+      "size": "230 x 170 cm"
+    },
+    {
+      "image": "/assets/uploads/jens_einhorn_12.jpg",
+      "material": "Mesh, fabric, pvc,  sand, metal,  rust, \nropes, and found objects on canvas\n",
+      "title": "WHERE THE SUN DON'T EVER SHINE II",
+      "year": "2016",
+      "size": "230 x 170 cm"
+    },
+    {
+      "image": "/assets/uploads/0004.jpg",
+      "material": "acrylic spraypaint and adhesive medium on canvas\n",
+      "title": "WALKING THE DOG",
+      "year": "2017",
+      "size": "200 x 150 cm"
+    },
+    {
+      "image": "/assets/uploads/_dsc4371.jpg",
+      "material": "mesh, strings, fabric dye acrylic spraypaint \nand adhesive medium on canvas",
+      "title": "THAT WAS ME",
+      "year": "2017",
+      "size": "200 x 150 cm"
+    },
+    {
+      "image": "/assets/uploads/jens_einhorn_63.jpg",
+      "material": "Mesh, ropes and found objects on primed canvas\n",
+      "title": "WHERE IS MY MEDICINE",
+      "year": "2015",
+      "size": "200 x 150 cm"
+    },
+    {
+      "image": "/assets/uploads/jens_einhorn_62.jpg",
+      "material": "Mesh, ropes and found objects  on primed canvas\n",
+      "title": "WHERE IS MY MEDICINE II",
+      "year": "2015",
+      "size": "200 x 150 cm"
+    },
+    {
+      "image": "/assets/uploads/jens_einhorn_13.jpg",
+      "material": "Oil, ink, tee, rope \nand gesso on canvas\n",
+      "title": "DAYDREAM",
+      "year": "2013",
+      "size": "190 x 140 cm"
+    }
+  ],
   "text": "",
   "note": "",
   "installation_views": []
